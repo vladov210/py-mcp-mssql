@@ -2,10 +2,10 @@ import sys
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from src.mssql.server import MCPServer
+from src.mssql.server import DBConfig
 
 def test_connection():
-    server = MCPServer()
+    server = DBConfig()
     try:
         conn = server.get_connection()
         print("✓ Database connection successful")
